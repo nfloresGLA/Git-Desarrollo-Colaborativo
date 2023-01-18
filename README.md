@@ -25,7 +25,7 @@ Esto nos mostrara el nombre / email asignados.
 // *. Hay que realizarlos <una sola vez> por repositorio
 ``` 
 
-## Configuracion continua de cada repositorio
+## Configuracion __continua__ de cada repositorio
 ``` js
 1. Ver el estado de nuestros archivos. (Cargados y no cargados)
 > git status (Working directory)
@@ -39,3 +39,57 @@ Esto nos mostrara el nombre / email asignados.
 4. Guardar los archivos trackeados al repositorio remoto.
 > git push origin rama
 ``` 
+---
+## Cambiar el nombre a la rama default
+
+### Primera parte: Repositorio remoto (Navegador)
+
+~~~ js
+1. ir a las ramas del proyecto que queremos modificar
+~~~
+![image](https://user-images.githubusercontent.com/120741890/213264779-61802ccd-b6ab-4fac-8c65-0ed345185172.png)
+
+~~~ js
+2. Click en View all Branches
+~~~
+
+![image](https://user-images.githubusercontent.com/120741890/213265648-34dd2291-c5cd-4489-89c2-2a2edfd91c2b.png)
+
+~~~ js
+3. Click en "editar el nombre de la rama"
+En este caso queremos cambiar la rama default
+ 
+// Icono del lapiz señalado con rojo
+~~~
+
+![image](https://user-images.githubusercontent.com/120741890/213266713-8a149401-8035-412e-8d2e-ab8a1d2a38ca.png)
+
+~~~ js
+4. Renombrar la rama default por el 
+nombre de preferencia y confirmar el cambio
+
+// Git chequea si el nombre de la rama esta disponible
+// Aparecera el comentario en un pop-up inline
+// validando o no el nombre
+
+~~~
+
+![image](https://user-images.githubusercontent.com/120741890/213267127-b660ed0f-6b2a-4f32-b287-395a94873ac4.png)
+
+### Segunda parte: Repositorio Local (Consola)
+
+~~~ js
+5. Modificar la rama local con el nuevo nombre
+> git branch -m viejaRama nuevaRama
+
+6. Busca los cambios efectuados (la primera parte)
+> git fetch origin
+
+7. Sincronizacion remota (vinculacion)
+> git branch -u origin/nuevaRama nuevaRama
+
+8. Setear la rama origin como principal
+> git remote set-head origin -a
+
+// ¡Importante! Seguir los pasos al pie de la letra.
+~~~
