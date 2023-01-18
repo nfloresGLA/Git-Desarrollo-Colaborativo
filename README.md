@@ -15,15 +15,21 @@
 
 Esto nos mostrara el nombre / email asignados.
 ```
+<hr>
 
 ## Configuracion inicial de __cada repositorio__
 ``` js
 1. En la carpeta que elijamos como Repositorio Local. *
 > git init
-> git remote add origin "link generado por git del repositorio"
+> git remote add origin "Link del repositorio"
 
 // *. Hay que realizarlos <una sola vez> por repositorio
 ``` 
+
+>_Link del repositorio - ejemplo._
+![image](https://user-images.githubusercontent.com/120741890/213313015-c35d5f9f-74e9-4902-bad4-7d86ecedf53e.png)
+
+<hr>
 
 ## Configuracion __continua__ de cada repositorio
 ``` js
