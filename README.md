@@ -74,7 +74,53 @@ Esto nos mostrara el nombre / email asignados.
 // * Hay que estar en la rama en donde queremos
 // <traer> los cambios de la otra rama "nombre-a-fusionar".
 ```
+---
+## Comandos utiles bajo _cierto_ __contexto__ (extras)
+``` ts
+1. Historial de confirmaciones (commits).
+> git log // Muestra los commits confirmados (abundance *).
+> git log --oneline // Muestra los commits de forma simple.
+> git log --oneline --decorate --all --graph *
 
+// *.1 Muestra mucha informacion en el log
+// *.2 Muestra los commits simplificados de forma bella.
+
+2. Eliminar un commit o mas ~numero*.
+> git reset --soft HEAD~1 // soft: SIN borrar los cambios.
+> git reset --hard HEAD~1 // hard: borrando todos los cambios.
+
+// * el numero de commits que queremos retroceder.
+
+3. Traer los cambios de la rama remota.
+> git pull --rebase origin nombre-rama *
+
+// Muy util cuando necesitamos traer nueva informacion
+// a nuestro repositorio local (alguien agrego commits)
+// o hayan aprobado un PR (pull request).
+
+4. Seleccionar trozos del mismo archivo para commits.
+> git add --patch
+
+// Abrira en la consola opciones para manipular
+// el archivo correspondiente para fragmentarlo.
+
+5. Almacen temporal (Agregar).
+> git stash // Almacena <solo> el WD (working directory).
+> git stash -u // Almacena el WD y SA (staging area).
+> git stash -m // Asigna un titulo al stash (similar commit).
+
+5.1 Almacen temporal (Remover).
+> git stash pop // Lo remueve del stash y lo borra.
+> git stash apply stash@{numero} // Remueve pero NO lo borra. 
+
+5.2 Almacen temporal (Ver / Traer).
+> git stash list // Muestra la lista de stash
+> git stash show stash@{numero} // Muestra un stash especifico.
+
+5.3 Almacen temporal (Borrar).
+> git stash drop // Borra el ultimo stash
+> git stash drop stash@{numero} // Borra el stash seleccionado.
+```
 ---
 ## Cambiar el nombre a la rama default
 
