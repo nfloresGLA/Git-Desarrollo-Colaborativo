@@ -51,6 +51,31 @@ Esto nos mostrara el nombre / email asignados.
 > git push origin rama
 ``` 
 ---
+## Comandos __Branch__
+
+``` js
+1.  git branch // muestra las ramas del repositorio local 
+1.1 git branch -a // muestra todas las ramas (local y remoto)
+1.2 git branch nombre-rama // crea una nueva rama
+1.3 git branch -d nombre-rama // elimina una rama
+1.4 git branch -m nombre-rama // renombra una rama
+
+2. Seleccionar una rama para trabajar en ella.
+> git checkout nombre-rama
+> git switch nombre-rama // a partir de la v 2.23
+
+3. Crear y situarnos en dicha rama.
+> git checkout -b nombre-rama
+> git switch -c nombre-rama
+
+4. Unir ramas
+> git merge nombre-rama-fusionar *
+
+// * Hay que estar en la rama en donde queremos
+// <traer> los cambios de la otra rama "nombre-a-fusionar".
+```
+
+---
 ## Cambiar el nombre a la rama default
 
 ### Primera parte: Repositorio remoto (Navegador)
