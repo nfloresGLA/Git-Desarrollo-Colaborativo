@@ -122,6 +122,23 @@ Esto nos mostrara el nombre / email asignados.
 > git stash drop stash@{numero} // Borra el stash seleccionado.
 ```
 ---
+## Creacion de alias
+~~~ ts
+Nos permite abreviar comandos largos o con
+cierta configuracion que sea de preferencia
+que puede ser muy utilizada o que es dificil de recordar
+
+> git config --global alias.abreviacion "Comando"
+
+Ejemplos.
+
+1. Git status.
+> git config --global alias.s "status"
+
+2. Git log --oneline.
+> git config --global alias.lg "log --oneline"
+~~~
+---
 ## Cambiar el nombre a la rama default
 
 ### Primera parte: Repositorio remoto (Navegador)
